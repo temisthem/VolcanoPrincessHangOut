@@ -40,8 +40,8 @@ export enum Character {
 
 export enum Area {
     None,
-    Olaf_Theatre,
-    Altar_Library,
-    Ancient_Colosseum,
-    Royal_Greenhouse
+    Olaf_Theatre = "Olaf Theatre",
+    Altar_Library = "Altar Library",
+    Ancient_Colosseum = "Ancient Colosseum",
+    Royal_Greenhouse = "Royal Greenhouse",
 }
