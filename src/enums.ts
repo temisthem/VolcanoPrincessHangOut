@@ -1,10 +1,5 @@
-﻿export const getCharactersAsString = (start?: number, end?: number): Character[] => {
-    const characters= filterEnum((Object.values(Character) as Character[]));
-
-    if (start !== undefined)
-        return characters.slice(start, end);
-
-    return characters;
+﻿export const getCharactersAsString = (): Character[] => {
+    return filterEnum((Object.values(Character) as Character[]));
 }
 
 export const getAreasAsString = (): Area[] => {

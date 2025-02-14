@@ -13,18 +13,18 @@ const App = () => {
 
   const activeCharacter = (character: Character) => {
     return selectedCharacter == character
-      ? 'active'
+      ? ''
       : 'filter grayscale opacity-80 hover:grayscale-0';
   };
 
   const activeArea = (area: Area) => {
     return selectedArea == area
-      ? 'active'
+      ? ''
       : 'filter grayscale opacity-80 hover:grayscale-0';
   };
 
-  const renderCharacters = (start: number, end?: number) => {
-    return getCharactersAsString(start, end).map((character) => (
+  const renderCharacters = () => {
+    return getCharactersAsString().map((character) => (
       <button
         className={'xl:[6%] mx-[0.25%] mb-[0.5%] w-[18%] sm:w-[13%] md:w-[8%]'}
         type={'button'}
@@ -105,9 +105,13 @@ const App = () => {
 
   return (
     <div className={"bg-[url('/images/Background.png')]"}>
-      <div className={'mx-auto min-h-screen h-full max-w-[1280px] bg-amber-50 bg-opacity-85 p-5'}>
+      <div
+        className={
+          'mx-auto h-full min-h-screen max-w-[1280px] bg-amber-50 bg-opacity-85 p-5'
+        }
+      >
         <div className={'flex flex-wrap justify-center'}>
-          {renderCharacters(0)}
+          {renderCharacters()}
         </div>
 
         <div className={'mt-2 flex flex-wrap justify-center'}>
