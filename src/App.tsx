@@ -33,7 +33,7 @@ const App = () => {
       >
         <img
           className={activeCharacter(character)}
-          src={`/images/Icon_${character}.png`}
+          src={`${import.meta.env.BASE_URL}/images/Icon_${character}.png`}
           alt={character.toString()}
         />
       </button>
@@ -50,7 +50,7 @@ const App = () => {
       >
         <img
           className={`${activeArea(area)}`}
-          src={`/images/Date_${area}.png`}
+          src={`${import.meta.env.BASE_URL}/images/Date_${area}.png`}
           alt={area.toString()}
         />
       </button>
@@ -61,10 +61,11 @@ const App = () => {
     if (selectedCharacter == Character.None || selectedArea == Area.None)
       return;
 
-    return data[selectedCharacter][selectedArea]['Interested'].map(
+    // @ts-ignore
+      return data[selectedCharacter][selectedArea]['Interested'].map(
       (choice: string) => (
         <div className={'relative w-fit'}>
-          <img src={'/images/DateBorder.png'} alt={choice} key={choice}></img>
+            <img src={`${import.meta.env.BASE_URL}images/DateBorder.png`} alt={choice} key={choice}></img>
           <p
             className={
               'absolute left-1/2 top-1/2 w-full translate-x-[-50%] translate-y-[-50%] px-5 text-[9px] text-white xs:text-sm'
@@ -81,8 +82,9 @@ const App = () => {
     if (selectedCharacter == Character.None || selectedArea == Area.None)
       return;
 
-    return Object.entries(data[selectedCharacter]['Q&A']).map(
-      ([question, answers], index) => (
+      // @ts-ignore
+      return Object.entries(data[selectedCharacter]['Q&A']).map(
+      ([question, answers]: [string, any], index) => (
         <div key={question} className="grid grid-cols-5 justify-between">
           <div
             className={`${

@@ -8,6 +8,7 @@ import path from 'path';
  */
 export default defineConfig({
   plugins: [react(), eslintPlugin()],
+  base: '/VolcanoPrincessHangOut/',
   resolve: {
     alias: {
       '@': path.resolve('./src'),
