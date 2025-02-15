@@ -89,14 +89,14 @@ const App = () => {
           <div
             className={`${
               index === 0 ? 'border-t-2' : 'border-t-0'
-            } col-span-3 border-2 border-amber-900 p-1 text-[12px] xs:text-[14px] md:text-base`}
+            } col-span-3 border-2 border-amber-900 p-1 text-[12px] xs:text-[14px] md:text-base font-bold`}
           >
             {question}
           </div>
           <div
             className={`${
               index === 0 ? 'border-t-2' : 'border-t-0'
-            } col-span-2 border-b-2 border-r-2 border-amber-900 p-1 text-[12px] xs:text-[14px] md:text-base`}
+            } col-span-2 border-b-2 border-r-2 border-amber-900 p-1 text-[12px] xs:text-[14px] md:text-base font-bold`}
           >
             {answers[0]}
           </div>
