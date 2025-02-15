@@ -23,6 +23,9 @@ const App = () => {
       : 'filter grayscale opacity-80 hover:grayscale-0';
   };
 
+  const isSelectionReady =
+    selectedCharacter !== Character.None && selectedArea !== Area.None;
+
   const renderCharacters = () => {
     return getCharactersAsString().map((character) => (
       <button
@@ -62,10 +65,14 @@ const App = () => {
       return;
 
     // @ts-ignore
-      return data[selectedCharacter][selectedArea]['Interested'].map(
+    return data[selectedCharacter][selectedArea]['Interested'].map(
       (choice: string) => (
         <div className={'relative w-fit'}>
-            <img src={`${import.meta.env.BASE_URL}images/DateBorder.png`} alt={choice} key={choice}></img>
+          <img
+            src={`${import.meta.env.BASE_URL}images/DateBorder.png`}
+            alt={choice}
+            key={choice}
+          ></img>
           <p
             className={
               'absolute left-1/2 top-1/2 w-full translate-x-[-50%] translate-y-[-50%] px-5 text-[9px] text-white xs:text-sm'
@@ -82,21 +89,21 @@ const App = () => {
     if (selectedCharacter == Character.None || selectedArea == Area.None)
       return;
 
-      // @ts-ignore
-      return Object.entries(data[selectedCharacter]['Q&A']).map(
+    // @ts-ignore
+    return Object.entries(data[selectedCharacter]['Q&A']).map(
       ([question, answers]: [string, any], index) => (
         <div key={question} className="grid grid-cols-5 justify-between">
           <div
             className={`${
               index === 0 ? 'border-t-2' : 'border-t-0'
-            } col-span-3 border-2 border-amber-900 p-1 text-[12px] xs:text-[14px] md:text-base font-bold`}
+            } col-span-3 border-2 border-amber-900 p-1 text-[12px] font-bold xs:text-[14px] md:text-base`}
           >
             {question}
           </div>
           <div
             className={`${
               index === 0 ? 'border-t-2' : 'border-t-0'
-            } col-span-2 border-b-2 border-r-2 border-amber-900 p-1 text-[12px] xs:text-[14px] md:text-base font-bold`}
+            } col-span-2 border-b-2 border-r-2 border-amber-900 p-1 text-[12px] font-bold xs:text-[14px] md:text-base`}
           >
             {answers[0]}
           </div>
@@ -120,13 +127,19 @@ const App = () => {
           {renderAreas()}
         </div>
 
-        <div
-          className={
-            'grid grid-cols-2 gap-1 justify-self-center md:mt-2 md:grid-cols-3 lg:grid-cols-4'
-          }
-        >
-          {renderOptions()}
-        </div>
+        {isSelectionReady ? (
+          <div
+            className={
+              'grid grid-cols-2 gap-1 justify-self-center md:mt-2 md:grid-cols-3 lg:grid-cols-4'
+            }
+          >
+            {renderOptions()}
+          </div>
+        ) : (
+          <p className={'mx-auto mt-6 w-fit text-xl font-bold'}>
+            Select a character and location to start!
+          </p>
+        )}
         <div className={'mt-2'}>{renderQuestions()}</div>
       </div>
     </div>
