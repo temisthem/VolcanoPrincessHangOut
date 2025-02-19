@@ -3,10 +3,9 @@ import data from './hangoutData.json';
 import {
   Area,
   Character,
-  getAreasAsString,
-  getCharactersAsString,
 } from '@/Hangout/enums.ts';
-import { publicDir } from '@/const.ts';
+import { publicDir } from '@/helpers.ts';
+import { getEnumValuesAsString } from '@/enums.ts';
 
 const Hangout =  ({ showName }: { showName: boolean }) => {
   const [selectedCharacter, setSelectedCharacter] = useState(Character.None);
@@ -28,7 +27,8 @@ const Hangout =  ({ showName }: { showName: boolean }) => {
     selectedCharacter !== Character.None && selectedArea !== Area.None;
 
   const renderCharacters = () => {
-    return getCharactersAsString().map((character) => (
+    return getEnumValuesAsString(Character).map((character) => (
+    // return getCharactersAsString().map((character) => (
       <div
         className={'xl:[6%] mx-[0.25%] mb-[1%] w-[18%] sm:w-[13%] md:w-[8%]'}
         key={character.toString()}
@@ -49,7 +49,7 @@ const Hangout =  ({ showName }: { showName: boolean }) => {
   };
 
   const renderAreas = () => {
-    return getAreasAsString().map((area) => (
+    return getEnumValuesAsString(Area).map((area) => (
       <div className={'mx-1 mb-2 w-[45%] sm:w-[22%]'}
            key={area.toString()}
       >

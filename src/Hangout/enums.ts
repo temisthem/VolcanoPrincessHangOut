@@ -1,16 +1,4 @@
-﻿export const getCharactersAsString = (): Character[] => {
-    return filterEnum((Object.values(Character) as Character[]));
-}
-
-export const getAreasAsString = (): Area[] => {
-    return filterEnum((Object.values(Area) as Area[]));
-}
-
-export const filterEnum = (arr: any[]) => {
-    return arr.filter((area) => isNaN(Number(area)) && area.toString() !== "None");
-}
-
-export enum Character {
+﻿export enum Character {
     None,
     Benson,
     Claude,
