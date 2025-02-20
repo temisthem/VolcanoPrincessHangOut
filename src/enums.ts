@@ -9,7 +9,7 @@ export const getEnumValuesAsString = <T extends Record<string, string | number>>
 };
 
 export const filterEnum = (arr: any[]) => {
-  return arr.filter((area) => isNaN(Number(area)) && area.toString() !== "None");
+  return arr.filter((val) => isNaN(Number(val)) && val.toString() !== "None");
 };
 
 export enum ScreenState {

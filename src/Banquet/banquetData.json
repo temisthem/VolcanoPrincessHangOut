@@ -1,0 +1,72 @@
+{
+  "Fountain Pool": {
+    "Retinue Knight": {
+      "Great": ["Handsome Horses", "Philosophy of Friendship"],
+      "Okay": ["Bath Tales", "Choosing Gifts", "Commoner's Job", "Cooking", "Magical Creatures", "New Arrivals", "Sketching Inspiration", "Study of Art", "Theatre Anecdotes"]
+    },
+    "Theater Star": {
+      "Great": ["Study of Art", "Theatre Anecdotes"],
+      "Okay": ["Bath Tales", "Dating Experience", "Handsome Horses", "New Arrivals", "Philosophy of Friendship", "Sketching Inspiration"]
+    },
+    "Dancer": {
+      "Great": ["Bath Tales", "Choosing Gifts", "Dating Experience", "Philosophy of Friendship", "Theatre Anecdotes"],
+      "Okay": ["Commoner's Job", "Cooking", "Handsome Horses", "New Arrivals", "Study of Art"]
+    },
+    "Kenneth": {
+      "Great": ["Choosing Gifts", "Commoner's Job", "Cooking", "Handsome Horses", "New Arrivals", "Philosophy of Friendship", "Sketching Inspiration", "Theatre Anecdotes"],
+      "Okay": ["Bath Tales", "Dating Experience", "Magical Creatures", "Study of Art"]
+    },
+    "Diva": {
+      "Great": ["New Arrivals", "Study of Art", "Theatre Anecdotes"],
+      "Okay": ["Bath Tales", "Choosing Gifts", "Commoner's Job", "Cooking", "Dating Experience", "Handsome Horses", "Philosophy of Friendship"]
+    }
+  },
+  "Stone Corridor": {
+    "Minister": {
+      "Great": ["Cooking", "Choosing Gifts", "Commoner's Job"],
+      "Okay": ["Bath Tales", "Dating Experience", "Handsome Horses", "Magical Creatures", "New Arrivals", "Philosophy of Friendship", "Sketching Inspiration", "Study of Art"]
+    },
+    "Famous Pianist": {
+      "Great": ["New Arrivals", "Theatre Anecdotes"],
+      "Okay": ["Bath Tales", "Choosing Gifts", "Commoner's Job", "Cooking", "Dating Experience", "Philosophy of Friendship", "Sketching Inspiration", "Study of Art"]
+    },
+    "Archbishop": {
+      "Great": ["Magical Creatures", "Philosophy of Friendship", "Sketching Inspiration", "Study of Art"],
+      "Okay": ["Bath Tales", "Choosing Gifts", "Commoner's Job", "Cooking", "Handsome Horses", "New Arrivals", "Theatre Anecdotes"]
+    },
+    "Royal Painter": {
+      "Great": ["Cooking", "Commoner's Job", "Sketching Inspiration"],
+      "Okay": ["Bath Tales", "Choosing Gifts", "Handsome Horses", "New Arrivals", "Philosophy of Friendship", "Study of Art", "Theatre Anecdotes"]
+    },
+    "University Scholar": {
+      "Great": ["Sketching Inspiration", "Philosophy of Friendship"],
+      "Okay": ["Choosing Gifts", "Commoner's Job", "Cooking", "Handsome Horses", "Magical Creatures", "New Arrivals", "Study of Art", "Theatre Anecdotes"]
+    }
+  },
+  "Ginkgo Manor": {
+    "Principal Bryan": {
+      "Great": ["Philosophy of Friendship", "Magical Creatures", "Choosing Gifts"],
+      "Okay": ["Bath Tales", "Commoner's Job", "Dating Experience", "Handsome Horses", "Sketching Inspiration", "Study of Art", "Theatre Anecdotes"]
+    },
+    "Brave": {
+      "Great": ["Cooking", "Magical Creatures", "Handsome Horses", "New Arrivals"],
+      "Okay": ["Bath Tales", "Choosing Gifts", "Commoner's Job", "Dating Experience", "Philosophy of Friendship", "Sketching Inspiration"]
+    },
+    "Countess": {
+      "Great": ["Commoner's Job", "Cooking"],
+      "Okay": ["Bath Tales", "Choosing Gifts", "Dating Experience", "New Arrivals", "Philosophy of Friendship", "Sketching Inspiration", "Study of Art", "Theatre Anecdotes"]
+    },
+    "Gwyneth": {
+      "Great": ["Cooking", "Commoner's Job"],
+      "Okay": ["Choosing Gifts", "Handsome Horses", "Magical Creatures", "New Arrivals", "Philosophy of Friendship", "Sketching Inspiration", "Study of Art", "Theatre Anecdotes"]
+    },
+    "Concubine": {
+      "Great": ["Sketching Inspiration"],
+      "Okay": ["Bath Tales", "Choosing Gifts", "Commoner's Job", "Dating Experience", "Handsome Horses", "Magical Creatures", "New Arrivals", "Philosophy of Friendship", "Study of Art", "Theatre Anecdotes"]
+    },
+    "Princess": {
+      "Great": ["Choosing Gifts", "Commoner's Job", "Cooking", "Philosophy of Friendship", "Study of Art"],
+      "Okay": ["Bath Tales", "Dating Experience", "Handsome Horses", "Magical Creatures", "New Arrivals", "Sketching Inspiration", "Theatre Anecdotes"]
+    }
+  }
+}

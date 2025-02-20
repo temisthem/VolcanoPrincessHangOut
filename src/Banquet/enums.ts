@@ -28,6 +28,7 @@ export enum Area {
 export enum Topic {
   BathTales = "Bath Tales",
   ChoosingGifts = "Choosing Gifts",
+  CommonersJob = "Commoner's Job",
   Cooking = "Cooking",
   DatingExperience = "Dating Experience",
   HandsomeHorses = "Handsome Horses",

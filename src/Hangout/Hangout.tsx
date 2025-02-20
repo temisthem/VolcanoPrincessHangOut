@@ -28,7 +28,6 @@ const Hangout =  ({ showName }: { showName: boolean }) => {
 
   const renderCharacters = () => {
     return getEnumValuesAsString(Character).map((character) => (
-    // return getCharactersAsString().map((character) => (
       <div
         className={'xl:[6%] mx-[0.25%] mb-[1%] w-[18%] sm:w-[13%] md:w-[8%]'}
         key={character.toString()}
