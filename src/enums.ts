@@ -8,7 +8,7 @@ export const getEnumValuesAsString = <T extends Record<string, string | number>>
   return filterEnum(Object.values(enumObj)) as T[keyof T][];
 };
 
-export const filterEnum = (arr: any[]) => {
+const filterEnum = (arr: any[]) => {
   return arr.filter((val) => isNaN(Number(val)) && val.toString() !== "None");
 };
 
