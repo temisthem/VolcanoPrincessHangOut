@@ -42,7 +42,7 @@ const Hangout =  ({ showName }: { showName: boolean }) => {
             alt={character.toString()}
           />
         </button>
-        {showName && <p className={'mx-auto mt-[-4px] w-fit text-[14px] lg:text-base'}>{character.toString()}</p>}
+        {showName && <p className={'mx-auto mt-[-4px] w-fit text-[14px] lg:text-base text-center'}>{character.toString()}</p>}
       </div>
     ));
   };
@@ -62,7 +62,7 @@ const Hangout =  ({ showName }: { showName: boolean }) => {
             alt={area.toString()}
           />
         </button>
-        {showName && <p className={'mx-auto w-fit text-[14px] md:text-base'}>{area.toString()}</p>}
+        {showName && <p className={'mx-auto w-fit text-[14px] md:text-base text-center'}>{area.toString()}</p>}
       </div>
     ));
   };

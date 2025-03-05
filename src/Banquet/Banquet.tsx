@@ -56,7 +56,7 @@ const Banquet = ({ showName }: { showName: boolean }) => {
             />
           </button>
           {showName && (
-            <p className={'mx-auto mt-[-4px] w-fit text-[14px] lg:text-base'}>
+            <p className={'mx-auto mt-[-4px] w-fit text-[14px] lg:text-base text-center'}>
               {character.toString()}
             </p>
           )}
@@ -78,7 +78,7 @@ const Banquet = ({ showName }: { showName: boolean }) => {
           />
         </button>
         {showName && (
-          <p className={'mx-auto w-fit text-[14px] md:text-base'}>
+          <p className={'mx-auto w-fit text-[14px] md:text-base text-center'}>
             {area.toString()}
           </p>
         )}
