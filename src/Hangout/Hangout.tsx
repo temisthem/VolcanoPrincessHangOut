@@ -74,11 +74,10 @@ const Hangout =  ({ showName }: { showName: boolean }) => {
     // @ts-ignore
     return data[selectedCharacter][selectedArea]['Interested'].map(
       (choice: string) => (
-        <div className={'relative w-fit'}>
+        <div className={'relative w-fit'} key={choice}>
           <img
             src={`${publicDir}Hangout/DateBorder.png`}
             alt={choice}
-            key={choice}
           ></img>
           <p
             className={
@@ -139,7 +138,7 @@ const Hangout =  ({ showName }: { showName: boolean }) => {
             {renderOptions()}
           </div>
           <div className="mt-3 grid grid-cols-5 justify-between">
-            <p className={"col-span-3 mx-auto font-bold text-[14px] md:text-base"}>Questions</p>
+            <p className={"col-span-3 mx-auto font-bold text-[14px] md:text-base"}>Prompts</p>
             <p className={"col-span-2 mx-auto font-bold text-[14px] md:text-base"}>Answers</p>
           </div>
           <div>{renderQuestions()}</div>

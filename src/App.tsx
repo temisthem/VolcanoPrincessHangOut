@@ -4,24 +4,52 @@ import { ScreenState } from '@/enums.ts';
 import Banquet from '@/Banquet/Banquet.tsx';
 
 const App = () => {
-  const [showNames, setShowNames] = useState(false);
-  const [screenState, setScreenState] = useState(ScreenState.Banquet);
+  const getSavedScreenState = () => {
+    const savedState = localStorage.getItem('screenState');
+    if (savedState === null) return ScreenState.Hangout;
 
-  const switchScreenState = () => {
-    setScreenState(
+    const parsedValue = Number(savedState);
+
+    return parsedValue in ScreenState
+      ? (parsedValue as ScreenState)
+      : ScreenState.Hangout;
+  };
+
+  const getSavedNameState = () => {
+    const savedState = localStorage.getItem('nameState');
+    if (savedState === null) return false;
+
+    return savedState === "true";
+  };
+
+
+  const [screenState, setScreenState] = useState<ScreenState>(getSavedScreenState());
+  const [showNames, setShowNames] = useState(getSavedNameState());
+
+  const onSwitchScreenState = () => {
+    const nextState =
       screenState === ScreenState.Hangout
         ? ScreenState.Banquet
-        : ScreenState.Hangout
-    );
+        : ScreenState.Hangout;
+
+    localStorage.setItem('screenState', nextState.toString());
+    setScreenState(nextState);
   };
+
+  const onSwitchNameDisplay = () => {
+    const nextState = !showNames
+
+    localStorage.setItem('nameState', nextState.toString());
+    setShowNames(nextState);
+  }
 
   const getScreenStateSwitchText = () => {
     return screenState === ScreenState.Hangout ? 'Banquet' : 'Hangout';
   };
 
   const getShowHideNamesText = () => {
-    return showNames ? "Hide Names" : "Show Names"
-  }
+    return showNames ? 'Hide Names' : 'Show Names';
+  };
 
   return (
     <div className={"bg-[url('/Background.png')]"}>
@@ -33,19 +61,23 @@ const App = () => {
         <div className={'mb-4 ml-auto flex'}>
           <button
             className={'mr-2 w-fit rounded-md bg-amber-400 px-2 py-1'}
-            onClick={() => setShowNames(!showNames)}
+            onClick={() => onSwitchNameDisplay()}
           >
             {getShowHideNamesText()}
           </button>
           <button
             className={'w-fit rounded-md bg-amber-400 px-2 py-1'}
-            onClick={() => switchScreenState()}
+            onClick={() => onSwitchScreenState()}
           >
             {getScreenStateSwitchText()}
           </button>
         </div>
-        {screenState === ScreenState.Hangout && <Hangout showName={showNames}></Hangout>}
-        {screenState === ScreenState.Banquet && <Banquet showName={showNames}></Banquet>}
+        {screenState === ScreenState.Hangout && (
+          <Hangout showName={showNames}></Hangout>
+        )}
+        {screenState === ScreenState.Banquet && (
+          <Banquet showName={showNames}></Banquet>
+        )}
       </div>
     </div>
   );
