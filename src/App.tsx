@@ -78,6 +78,7 @@ const App = () => {
         {screenState === ScreenState.Banquet && (
           <Banquet showName={showNames}></Banquet>
         )}
+        <p className={"ml-auto mt-auto pt-8 text-sm"}>Visual assets & information courtesy of <a className={"text-blue-700"} href={"https://volcanoprincess.miraheze.org/"}>https://volcanoprincess.miraheze.org/</a></p>
       </div>
     </div>
   );
